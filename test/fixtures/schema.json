@@ -1,0 +1,1244 @@
+{
+  "data": {
+    "__schema": {
+      "types": [
+        {
+          "name": "Query",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "_placeHolder",
+              "deprecationReason": null,
+              "type": {
+                "name": "Boolean",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `Boolean` scalar type represents `true` or `false`."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "Users",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "QueryUsers",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "Posts",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "QueryPosts",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "Boolean",
+          "kind": "SCALAR",
+          "fields": null
+        },
+        {
+          "name": "QueryUsers",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "list",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "User",
+                    "ofType": null
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "one",
+              "deprecationReason": null,
+              "type": {
+                "name": "User",
+                "kind": "OBJECT",
+                "ofType": null,
+                "enumValues": null,
+                "description": ""
+              },
+              "description": "",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "Int",
+          "kind": "SCALAR",
+          "fields": null
+        },
+        {
+          "name": "User",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "_id",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "username",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "nickname",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "email",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "isAdmin",
+              "deprecationReason": null,
+              "type": {
+                "name": "Boolean",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `Boolean` scalar type represents `true` or `false`."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "bio",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "gender",
+              "deprecationReason": null,
+              "type": {
+                "name": "Gender",
+                "kind": "ENUM",
+                "ofType": null,
+                "enumValues": [
+                  {
+                    "name": "FEMALE",
+                    "description": "",
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                  },
+                  {
+                    "name": "MALE",
+                    "description": "",
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                  },
+                  {
+                    "name": "UNKNOWN",
+                    "description": "",
+                    "isDeprecated": false,
+                    "deprecationReason": null
+                  }
+                ],
+                "description": ""
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "createdAt",
+              "deprecationReason": null,
+              "type": {
+                "name": "DateTime",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "updateAt",
+              "deprecationReason": null,
+              "type": {
+                "name": "DateTime",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+              },
+              "description": "",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "ID",
+          "kind": "SCALAR",
+          "fields": null
+        },
+        {
+          "name": "String",
+          "kind": "SCALAR",
+          "fields": null
+        },
+        {
+          "name": "Gender",
+          "kind": "ENUM",
+          "fields": null
+        },
+        {
+          "name": "DateTime",
+          "kind": "SCALAR",
+          "fields": null
+        },
+        {
+          "name": "QueryPosts",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "list",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Post",
+                    "ofType": null
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "one",
+              "deprecationReason": null,
+              "type": {
+                "name": "User",
+                "kind": "OBJECT",
+                "ofType": null,
+                "enumValues": null,
+                "description": ""
+              },
+              "description": "",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "Post",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "_id",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "title",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "description",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "tags",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "content",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "createdAt",
+              "deprecationReason": null,
+              "type": {
+                "name": "DateTime",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "updateAt",
+              "deprecationReason": null,
+              "type": {
+                "name": "DateTime",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+              },
+              "description": "",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "Mutation",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "_placeHolder",
+              "deprecationReason": null,
+              "type": {
+                "name": "Boolean",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `Boolean` scalar type represents `true` or `false`."
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "Users",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "MutationUsers",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "Posts",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "MutationPosts",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "MutationUsers",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "create",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "User",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "update",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "User",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "save",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "User",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "remove",
+              "deprecationReason": null,
+              "type": {
+                "name": "User",
+                "kind": "OBJECT",
+                "ofType": null,
+                "enumValues": null,
+                "description": ""
+              },
+              "description": "",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "InputUser",
+          "kind": "INPUT_OBJECT",
+          "fields": null
+        },
+        {
+          "name": "MutationPosts",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "create",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "Post",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "update",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "Post",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "save",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "Post",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "",
+              "isDeprecated": false
+            },
+            {
+              "name": "remove",
+              "deprecationReason": null,
+              "type": {
+                "name": "Post",
+                "kind": "OBJECT",
+                "ofType": null,
+                "enumValues": null,
+                "description": ""
+              },
+              "description": "",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "InputPost",
+          "kind": "INPUT_OBJECT",
+          "fields": null
+        },
+        {
+          "name": "__Schema",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "types",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "OBJECT",
+                      "name": "__Type",
+                      "ofType": null
+                    }
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "A list of all types supported by this server.",
+              "isDeprecated": false
+            },
+            {
+              "name": "queryType",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "The type that query operations will be rooted at.",
+              "isDeprecated": false
+            },
+            {
+              "name": "mutationType",
+              "deprecationReason": null,
+              "type": {
+                "name": "__Type",
+                "kind": "OBJECT",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
+              },
+              "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
+              "isDeprecated": false
+            },
+            {
+              "name": "subscriptionType",
+              "deprecationReason": null,
+              "type": {
+                "name": "__Type",
+                "kind": "OBJECT",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
+              },
+              "description": "If this server support subscription, the type that subscription operations will be rooted at.",
+              "isDeprecated": false
+            },
+            {
+              "name": "directives",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "OBJECT",
+                      "name": "__Directive",
+                      "ofType": null
+                    }
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": "A list of all directives supported by this server.",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "__Type",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "kind",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "__TypeKind",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "name",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "description",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "fields",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Field",
+                    "ofType": null
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "interfaces",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Type",
+                    "ofType": null
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "possibleTypes",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Type",
+                    "ofType": null
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "enumValues",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__EnumValue",
+                    "ofType": null
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "inputFields",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__InputValue",
+                    "ofType": null
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "ofType",
+              "deprecationReason": null,
+              "type": {
+                "name": "__Type",
+                "kind": "OBJECT",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types."
+              },
+              "description": null,
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "__TypeKind",
+          "kind": "ENUM",
+          "fields": null
+        },
+        {
+          "name": "__Field",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "description",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "args",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "OBJECT",
+                      "name": "__InputValue",
+                      "ofType": null
+                    }
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "type",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "isDeprecated",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "deprecationReason",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": null,
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "__InputValue",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "description",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "type",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "defaultValue",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": "A GraphQL-formatted string representing the default value for this input value.",
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "__EnumValue",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "description",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "isDeprecated",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "deprecationReason",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": null,
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "__Directive",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "description",
+              "deprecationReason": null,
+              "type": {
+                "name": "String",
+                "kind": "SCALAR",
+                "ofType": null,
+                "enumValues": null,
+                "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "locations",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "ENUM",
+                      "name": "__DirectiveLocation",
+                      "ofType": null
+                    }
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            },
+            {
+              "name": "args",
+              "deprecationReason": null,
+              "type": {
+                "name": null,
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "OBJECT",
+                      "name": "__InputValue",
+                      "ofType": null
+                    }
+                  }
+                },
+                "enumValues": null,
+                "description": null
+              },
+              "description": null,
+              "isDeprecated": false
+            }
+          ]
+        },
+        {
+          "name": "__DirectiveLocation",
+          "kind": "ENUM",
+          "fields": null
+        },
+        {
+          "name": "JSON",
+          "kind": "SCALAR",
+          "fields": null
+        }
+      ]
+    }
+  }
+}
